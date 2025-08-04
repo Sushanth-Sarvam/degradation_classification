@@ -6,24 +6,7 @@ A machine learning project for automatically classifying the readability quality
 
 This project tackles the challenge of **automatically determining document readability** for Gujarati text documents. Using a combination of state-of-the-art feature extraction models and machine learning algorithms, we achieve **78.81% test accuracy** in classifying documents as "readable" or "non-readable".
 
-### 🏆 Key Achievements
-- **Best Performance**: 78.81% test accuracy with XGBoost + EfficientNet
-- **9 Different Model Configurations** tested and compared
-- **4 Feature Extraction Methods** evaluated (EfficientNet, ResNet50, YOLOv8n, LayoutXLM)
-- **3 ML Algorithms** compared (XGBoost, SVM, CNN)
-- **Comprehensive Experiment Tracking** with detailed performance analysis
 
-## 📊 Performance Results
-
-| Rank | Model | Feature Extractor | Test Accuracy | Test F1 | Overfitting |
-|------|-------|-------------------|---------------|---------|-------------|
-| 🥇 1st | **XGBoost** | **EfficientNet** | **78.81%** | 76.57% | 21.19% |
-| 🥈 2nd | **SVM** | **EfficientNet** | **78.55%** | 75.22% | 21.19% |
-| 🥉 3rd | **SVM** | **ResNet50** | **74.42%** | 75.06% | 21.17% |
-| 4th | **XGBoost** | **ResNet50** | **71.06%** | 72.14% | 28.94% |
-| 5th | **SVM** | **YOLOv8n** | **64.86%** | 46.46% | 20.36% |
-
-> **Key Finding**: EfficientNet-based feature extraction consistently outperforms other methods!
 
 ## 🗂️ Dataset Information
 
@@ -142,30 +125,6 @@ python readability_training/scripts/create_simple_split_summary.py
 - **LayoutXLM underperformance**: Document-specific model disappoints
 - **YOLOv8n inconsistency**: High variance across different books
 
-## 🔮 Future Improvements
-
-### 🎯 Immediate Next Steps
-1. **Address Overfitting**: 
-   - Add data augmentation (rotation, brightness, contrast)
-   - Implement early stopping and cross-validation
-   - Try ensemble methods combining top 3 models
-
-2. **Data Enhancement**:
-   - Collect more diverse training data
-   - Balance dataset across different book styles
-   - Add more challenging edge cases
-
-3. **Model Architecture**:
-   - Fine-tune CNN with proper regularization
-   - Experiment with Vision Transformers
-   - Try multi-scale feature fusion
-
-### 🔬 Research Directions
-- **Multi-language support**: Extend to Hindi, English, other Indic scripts
-- **Fine-grained classification**: Beyond binary to readability scores (1-10)
-- **Real-time processing**: Optimize for mobile/web deployment
-- **Explain ability**: Add LIME/SHAP analysis for model interpretability
-
 ## 📊 Files and Artifacts
 
 ### 🎯 Best Model Files
@@ -182,27 +141,3 @@ python readability_training/scripts/create_simple_split_summary.py
 - `readability_training/examples/train_images/`: 5 sample training images
 - `readability_training/examples/test_images/`: 5 sample test images with predictions
 - `readability_training/examples/summaries/`: Metadata and prediction details
-
-## 🤝 Contributing
-
-This project is part of ongoing research in document quality assessment for Indic languages. Contributions welcome for:
-
-- Additional language support
-- Novel feature extraction methods  
-- Improved model architectures
-- Better evaluation metrics
-- Dataset expansion
-
-## 📄 License
-
-This project is available for research and educational purposes. Please cite appropriately if using in academic work.
-
-## 🙏 Acknowledgments
-
-- Gujarati document dataset contributors
-- Pre-trained model providers (EfficientNet, ResNet, etc.)
-- Open source ML community (scikit-learn, XGBoost, PyTorch)
-
----
-
-**Generated**: January 2025 | **Status**: ✅ Production Ready | **Best Accuracy**: 78.81% 
