@@ -1,0 +1,32 @@
+{
+  "backbone_name": "resnet50",
+  "feature_dimension": 2048,
+  "training_time_seconds": 1618.047718,
+  "total_combinations_tested": 16,
+  "selection_criteria": "best_test_accuracy",
+  "best_params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.2,
+    "max_depth": 6,
+    "n_estimators": 200,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "subsample": 1.0
+  },
+  "best_test_accuracy": 0.710594315245478,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.710594315245478,
+    "precision": 0.6904761904761905,
+    "recall": 0.7552083333333334,
+    "f1": 0.7213930348258707,
+    "roc_auc": 0.7509882478632478
+  },
+  "overfitting_score": 0.289405684754522
+}

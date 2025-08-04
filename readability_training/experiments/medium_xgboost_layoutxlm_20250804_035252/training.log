@@ -1,0 +1,68 @@
+2025-08-04 03:52:52,147 - INFO - Loading layoutxlm features from embeddings/layoutxlm_embeddings_20250804_030331
+2025-08-04 03:52:52,156 - INFO - ✅ Features loaded successfully
+2025-08-04 03:52:52,156 - INFO - 📊 Train features: (771, 768)
+2025-08-04 03:52:52,156 - INFO - 📊 Test features: (387, 768)
+2025-08-04 03:52:52,156 - INFO - 📊 Feature dimension: 768
+2025-08-04 03:52:52,157 - INFO - 🚀 Starting MEDIUM hyperparameter XGBoost training...
+2025-08-04 03:52:52,157 - INFO - 🔧 MEDIUM hyperparameter tuning...
+2025-08-04 03:52:52,157 - INFO - 📊 Total parameter combinations: 16
+2025-08-04 03:52:52,157 - INFO - 🔄 Cross-validation folds: 3
+2025-08-04 03:52:52,157 - INFO - ⏱️  Estimated time: 8.0 - 24.0 minutes
+2025-08-04 03:52:52,157 - INFO - 🚀 Starting hyperparameter search...
+2025-08-04 03:55:04,470 - INFO - ✅ Hyperparameter search completed!
+2025-08-04 03:55:04,478 - INFO - ⏱️  Total training time: 0:02:12.309162
+2025-08-04 03:55:04,478 - INFO - 🏆 Best parameters found:
+2025-08-04 03:55:04,478 - INFO -    colsample_bytree: 0.8
+2025-08-04 03:55:04,478 - INFO -    learning_rate: 0.2
+2025-08-04 03:55:04,478 - INFO -    max_depth: 3
+2025-08-04 03:55:04,478 - INFO -    n_estimators: 200
+2025-08-04 03:55:04,478 - INFO -    reg_alpha: 0
+2025-08-04 03:55:04,478 - INFO -    reg_lambda: 1
+2025-08-04 03:55:04,479 - INFO -    subsample: 0.8
+2025-08-04 03:55:04,479 - INFO - 🏆 Best CV F1 score: 0.3787
+2025-08-04 03:55:04,678 - INFO - 🔝 Top parameter combinations:
+2025-08-04 03:55:04,683 - INFO -    1. F1: 0.3787 (±0.0358) - {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 03:55:04,683 - INFO -    2. F1: 0.3703 (±0.0520) - {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 03:55:04,684 - INFO -    3. F1: 0.3676 (±0.0325) - {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 03:55:04,684 - INFO -    4. F1: 0.3566 (±0.0081) - {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 03:55:04,684 - INFO -    5. F1: 0.3548 (±0.0258) - {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 03:55:04,684 - INFO - 📊 Evaluating best model on training and test sets...
+2025-08-04 03:55:04,685 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 03:55:04,685 - INFO -    Making predictions...
+2025-08-04 03:55:04,696 - INFO -    Calculating probabilities...
+2025-08-04 03:55:04,697 - INFO -    Computing metrics...
+2025-08-04 03:55:04,773 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 03:55:04,773 - INFO -    📈 Accuracy:  1.0000
+2025-08-04 03:55:04,774 - INFO -    📈 Precision: 1.0000
+2025-08-04 03:55:04,774 - INFO -    📈 Recall:    1.0000
+2025-08-04 03:55:04,774 - INFO -    📈 F1 Score:  1.0000
+2025-08-04 03:55:04,774 - INFO -    📈 ROC AUC:   1.0000
+2025-08-04 03:55:04,775 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(425), np.float32(1.0): np.int64(346)}
+2025-08-04 03:55:04,775 - INFO -    📊 Pred distribution: {np.int64(0): np.int64(425), np.int64(1): np.int64(346)}
+2025-08-04 03:55:04,775 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 03:55:04,775 - INFO -    Making predictions...
+2025-08-04 03:55:04,787 - INFO -    Calculating probabilities...
+2025-08-04 03:55:04,788 - INFO -    Computing metrics...
+2025-08-04 03:55:04,795 - INFO - 📊 TEST RESULTS:
+2025-08-04 03:55:04,795 - INFO -    📈 Accuracy:  0.4884
+2025-08-04 03:55:04,795 - INFO -    📈 Precision: 0.4789
+2025-08-04 03:55:04,796 - INFO -    📈 Recall:    0.3542
+2025-08-04 03:55:04,796 - INFO -    📈 F1 Score:  0.4072
+2025-08-04 03:55:04,796 - INFO -    📈 ROC AUC:   0.4965
+2025-08-04 03:55:04,796 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(195), np.float32(1.0): np.int64(192)}
+2025-08-04 03:55:04,796 - INFO -    📊 Pred distribution: {np.int64(0): np.int64(245), np.int64(1): np.int64(142)}
+2025-08-04 03:55:04,909 - INFO - 📄 Performance metrics saved to: experiments/medium_xgboost_layoutxlm_20250804_035252/performance_metrics.txt
+2025-08-04 03:55:04,909 - INFO - 💾 Model saved to: experiments/medium_xgboost_layoutxlm_20250804_035252/best_model.pkl
+2025-08-04 03:55:04,909 - INFO - 💾 Results saved to: experiments/medium_xgboost_layoutxlm_20250804_035252/results.json
+2025-08-04 03:55:04,909 - INFO - 💾 CV results saved to: experiments/medium_xgboost_layoutxlm_20250804_035252/cv_results.csv
+2025-08-04 03:55:04,909 - INFO - 📊 Creating visualization plots...
+2025-08-04 03:55:04,946 - INFO -    📈 Creating feature importance plot...
+2025-08-04 03:55:05,966 - INFO -    📈 Creating confusion matrix...
+2025-08-04 03:55:06,291 - INFO -    📈 Creating ROC curve...
+2025-08-04 03:55:06,597 - INFO -    📈 Creating hyperparameter search visualization...
+2025-08-04 03:55:06,684 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-08-04 03:55:06,685 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-08-04 03:55:06,693 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-08-04 03:55:06,694 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-08-04 03:55:07,325 - INFO - ✅ All 4 plots created successfully
+2025-08-04 03:55:07,326 - INFO - 📁 Plots saved to: experiments/medium_xgboost_layoutxlm_20250804_035252/plots

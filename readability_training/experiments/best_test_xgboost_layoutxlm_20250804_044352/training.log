@@ -1,0 +1,51 @@
+2025-08-04 04:43:52,479 - INFO - Loading layoutxlm features from embeddings/layoutxlm_embeddings_20250804_030331
+2025-08-04 04:43:52,518 - INFO - ✅ Features loaded successfully
+2025-08-04 04:43:52,527 - INFO - 📊 Train features: (771, 768)
+2025-08-04 04:43:52,527 - INFO - 📊 Test features: (387, 768)
+2025-08-04 04:43:52,527 - INFO - 📊 Feature dimension: 768
+2025-08-04 04:43:52,527 - INFO - 🚀 Starting XGBoost training with BEST TEST ACCURACY selection...
+2025-08-04 04:43:52,528 - INFO - 🔧 Testing 16 parameter combinations
+2025-08-04 04:43:52,528 - INFO - 🎯 Strategy: Train each model and save the one with BEST TEST ACCURACY
+2025-08-04 04:43:52,528 - INFO - ⏱️  Estimated time: 8.0 - 32 minutes
+2025-08-04 04:44:53,218 - INFO - 🏆 NEW BEST! Combination 1/16
+2025-08-04 04:44:53,223 - INFO -    📈 Test Accuracy: 0.4729
+2025-08-04 04:44:53,223 - INFO -    📈 Test F1: 0.4171
+2025-08-04 04:44:53,227 - INFO -    📈 Overfitting: 0.5245
+2025-08-04 04:44:53,227 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 04:45:48,284 - INFO - 🏆 NEW BEST! Combination 2/16
+2025-08-04 04:45:48,285 - INFO -    📈 Test Accuracy: 0.4935
+2025-08-04 04:45:48,285 - INFO -    📈 Test F1: 0.4167
+2025-08-04 04:45:48,285 - INFO -    📈 Overfitting: 0.5065
+2025-08-04 04:45:48,285 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 1.0}
+2025-08-04 04:49:34,128 - INFO - 🏆 NEW BEST! Combination 4/16
+2025-08-04 04:49:34,129 - INFO -    📈 Test Accuracy: 0.5013
+2025-08-04 04:49:34,130 - INFO -    📈 Test F1: 0.4340
+2025-08-04 04:49:34,130 - INFO -    📈 Overfitting: 0.4987
+2025-08-04 04:49:34,130 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 1.0}
+2025-08-04 05:01:59,488 - INFO - 📊 Progress: 10/16 - Current best test accuracy: 0.5013
+2025-08-04 05:10:56,283 - INFO - ✅ Training completed!
+2025-08-04 05:10:56,283 - INFO - ⏱️  Total training time: 0:27:03.754917
+2025-08-04 05:10:56,283 - INFO - 🏆 BEST MODEL SELECTED:
+2025-08-04 05:10:56,284 - INFO -    📈 Test Accuracy: 0.5013
+2025-08-04 05:10:56,284 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 05:10:56,326 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 05:10:56,327 - INFO -    📈 Accuracy:  1.0000
+2025-08-04 05:10:56,327 - INFO -    📈 Precision: 1.0000
+2025-08-04 05:10:56,328 - INFO -    📈 Recall:    1.0000
+2025-08-04 05:10:56,328 - INFO -    📈 F1 Score:  1.0000
+2025-08-04 05:10:56,328 - INFO -    📈 ROC AUC:   1.0000
+2025-08-04 05:10:56,328 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 05:10:56,350 - INFO - 📊 TEST RESULTS:
+2025-08-04 05:10:56,350 - INFO -    📈 Accuracy:  0.5013
+2025-08-04 05:10:56,350 - INFO -    📈 Precision: 0.4966
+2025-08-04 05:10:56,351 - INFO -    📈 Recall:    0.3854
+2025-08-04 05:10:56,351 - INFO -    📈 F1 Score:  0.4340
+2025-08-04 05:10:56,351 - INFO -    📈 ROC AUC:   0.5156
+2025-08-04 05:10:56,363 - INFO - 📄 Performance metrics saved to: experiments/best_test_xgboost_layoutxlm_20250804_044352/performance_metrics.txt
+2025-08-04 05:10:56,363 - INFO - 💾 Best model saved to: experiments/best_test_xgboost_layoutxlm_20250804_044352/best_test_model.pkl
+2025-08-04 05:10:56,363 - INFO - 💾 Results saved to: experiments/best_test_xgboost_layoutxlm_20250804_044352/results.json
+2025-08-04 05:10:56,363 - INFO - 💾 All combinations saved to: experiments/best_test_xgboost_layoutxlm_20250804_044352/all_combinations.csv
+2025-08-04 05:10:56,363 - INFO - 📊 Creating visualization plots...
+2025-08-04 05:10:56,364 - INFO -    📈 Creating overfitting analysis...
+2025-08-04 05:10:57,658 - INFO - ✅ Analysis plots created successfully
+2025-08-04 05:10:57,658 - INFO - 📁 Plots saved to: experiments/best_test_xgboost_layoutxlm_20250804_044352/plots

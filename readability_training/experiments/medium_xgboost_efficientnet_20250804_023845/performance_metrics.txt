@@ -1,0 +1,34 @@
+📈 EFFICIENTNET XGBoost Performance Metrics (Medium Search)
+======================================================================
+
+Training Summary:
+- Training Time: 121.6 seconds
+- Feature Dimension: 1,280 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Hyperparameter Combinations Tested: 16
+- Cross-validation Folds: 3
+- Best CV F1 Score: 0.4412
+
+Best Hyperparameters:
+- colsample_bytree: 0.8
+- learning_rate: 0.2
+- max_depth: 6
+- n_estimators: 200
+- reg_alpha: 0
+- reg_lambda: 1
+- subsample: 1.0
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |   100.00% |    77.26% |   -22.74% |
+| Precision   |   100.00% |    80.95% |   -19.05% |
+| Recall      |   100.00% |    70.83% |   -29.17% |
+| F1          |   100.00% |    75.56% |   -24.44% |
+| Roc Auc     |   100.00% |    82.53% |   -17.47% |
+
+
+Generated: 2025-08-04 02:40:47

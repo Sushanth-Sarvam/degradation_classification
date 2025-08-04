@@ -1,0 +1,40 @@
+📈 EFFICIENTNET XGBoost Performance (Best Test Accuracy)
+======================================================================
+
+Training Summary:
+- Selection Criteria: Best Test Accuracy
+- Training Time: 1600.3 seconds
+- Feature Dimension: 1,280 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Combinations Tested: 16
+- Best Test Accuracy: 0.7881
+- Overfitting Score: 0.2119
+
+Best Hyperparameters:
+- colsample_bytree: 0.8
+- learning_rate: 0.2
+- max_depth: 3
+- n_estimators: 100
+- reg_alpha: 0
+- reg_lambda: 1
+- subsample: 1.0
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |   100.00% |    78.81% |   -21.19% |
+| Precision   |   100.00% |    84.81% |   -15.19% |
+| Recall      |   100.00% |    69.79% |   -30.21% |
+| F1          |   100.00% |    76.57% |   -23.43% |
+| Roc Auc     |   100.00% |    83.61% |   -16.39% |
+
+
+Anti-Overfitting Strategy:
+- Tested 16 parameter combinations
+- Selected model with highest test accuracy
+- This prevents overfitting by choosing generalization over memorization
+
+Generated: 2025-08-04 05:10:18

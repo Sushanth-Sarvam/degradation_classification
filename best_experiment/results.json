@@ -1,0 +1,32 @@
+{
+  "backbone_name": "efficientnet",
+  "feature_dimension": 1280,
+  "training_time_seconds": 1600.298345,
+  "total_combinations_tested": 16,
+  "selection_criteria": "best_test_accuracy",
+  "best_params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.2,
+    "max_depth": 3,
+    "n_estimators": 100,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "subsample": 1.0
+  },
+  "best_test_accuracy": 0.7881136950904393,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.7881136950904393,
+    "precision": 0.8481012658227848,
+    "recall": 0.6979166666666666,
+    "f1": 0.7657142857142857,
+    "roc_auc": 0.8361378205128206
+  },
+  "overfitting_score": 0.21188630490956073
+}

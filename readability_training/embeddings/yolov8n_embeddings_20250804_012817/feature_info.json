@@ -1,0 +1,28 @@
+{
+  "backbone_name": "yolov8n",
+  "feature_dimension": 1024,
+  "input_size": [
+    640,
+    640
+  ],
+  "train_samples": 771,
+  "test_samples": 387,
+  "extraction_date": "2025-08-04T01:30:08.645049",
+  "device": "cpu",
+  "train_feature_shape": [
+    771,
+    256
+  ],
+  "test_feature_shape": [
+    387,
+    256
+  ],
+  "train_class_distribution": {
+    "readable": 346,
+    "non_readable": 425
+  },
+  "test_class_distribution": {
+    "readable": 192,
+    "non_readable": 195
+  }
+}

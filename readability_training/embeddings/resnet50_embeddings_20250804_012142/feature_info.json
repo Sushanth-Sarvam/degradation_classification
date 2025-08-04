@@ -1,0 +1,28 @@
+{
+  "backbone_name": "resnet50",
+  "feature_dimension": 2048,
+  "input_size": [
+    224,
+    224
+  ],
+  "train_samples": 771,
+  "test_samples": 387,
+  "extraction_date": "2025-08-04T01:22:58.510999",
+  "device": "cuda",
+  "train_feature_shape": [
+    771,
+    2048
+  ],
+  "test_feature_shape": [
+    387,
+    2048
+  ],
+  "train_class_distribution": {
+    "readable": 346,
+    "non_readable": 425
+  },
+  "test_class_distribution": {
+    "readable": 192,
+    "non_readable": 195
+  }
+}

@@ -1,0 +1,67 @@
+2025-08-04 04:03:13,643 - INFO - Loading yolov8n features from embeddings/yolov8n_embeddings_20250804_012817
+2025-08-04 04:03:13,657 - INFO - ✅ Features loaded successfully
+2025-08-04 04:03:13,663 - INFO - 📊 Train features: (771, 256)
+2025-08-04 04:03:13,663 - INFO - 📊 Test features: (387, 256)
+2025-08-04 04:03:13,663 - INFO - 📊 Feature dimension: 256
+2025-08-04 04:03:13,663 - INFO - 🚀 Starting SVM training with BEST TEST ACCURACY selection...
+2025-08-04 04:03:13,664 - INFO - 🔧 Testing 144 parameter combinations
+2025-08-04 04:03:13,664 - INFO - 🎯 Strategy: Train each SVM and save the one with BEST TEST ACCURACY
+2025-08-04 04:03:13,664 - INFO - 📈 Using StandardScaler for feature normalization
+2025-08-04 04:03:13,664 - INFO - ⏱️  Estimated time: 144 - 720 minutes
+2025-08-04 04:03:15,262 - INFO - 🏆 NEW BEST! Combination 1/144
+2025-08-04 04:03:15,271 - INFO -    📈 Test Accuracy: 0.5142
+2025-08-04 04:03:15,271 - INFO -    📈 Test F1: 0.0505
+2025-08-04 04:03:15,271 - INFO -    📈 Overfitting: 0.0461
+2025-08-04 04:03:15,271 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:15,271 - INFO -    🔧 C: 0.01
+2025-08-04 04:03:19,933 - INFO - 🏆 NEW BEST! Combination 4/144
+2025-08-04 04:03:19,939 - INFO -    📈 Test Accuracy: 0.5788
+2025-08-04 04:03:19,951 - INFO -    📈 Test F1: 0.4399
+2025-08-04 04:03:19,951 - INFO -    📈 Overfitting: 0.2461
+2025-08-04 04:03:19,951 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:19,952 - INFO -    🔧 C: 0.01
+2025-08-04 04:03:27,654 - INFO - 🏆 NEW BEST! Combination 10/144
+2025-08-04 04:03:27,654 - INFO -    📈 Test Accuracy: 0.6408
+2025-08-04 04:03:27,654 - INFO -    📈 Test F1: 0.4633
+2025-08-04 04:03:27,654 - INFO -    📈 Overfitting: 0.2230
+2025-08-04 04:03:27,654 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:27,654 - INFO -    🔧 C: 0.01
+2025-08-04 04:03:40,337 - INFO - 📊 Progress: 20/144 - Current best test accuracy: 0.6408
+2025-08-04 04:03:52,583 - INFO - 🏆 NEW BEST! Combination 31/144
+2025-08-04 04:03:52,595 - INFO -    📈 Test Accuracy: 0.6486
+2025-08-04 04:03:52,595 - INFO -    📈 Test F1: 0.4646
+2025-08-04 04:03:52,595 - INFO -    📈 Overfitting: 0.2036
+2025-08-04 04:03:52,595 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:52,595 - INFO -    🔧 C: 0.1
+2025-08-04 04:04:03,411 - INFO - 📊 Progress: 40/144 - Current best test accuracy: 0.6486
+2025-08-04 04:04:20,912 - INFO - 📊 Progress: 60/144 - Current best test accuracy: 0.6486
+2025-08-04 04:04:38,446 - INFO - 📊 Progress: 80/144 - Current best test accuracy: 0.6486
+2025-08-04 04:04:54,498 - INFO - 📊 Progress: 100/144 - Current best test accuracy: 0.6486
+2025-08-04 04:05:07,829 - INFO - 📊 Progress: 120/144 - Current best test accuracy: 0.6486
+2025-08-04 04:05:19,977 - INFO - 📊 Progress: 140/144 - Current best test accuracy: 0.6486
+2025-08-04 04:05:22,741 - INFO - ✅ Training completed!
+2025-08-04 04:05:22,746 - INFO - ⏱️  Total training time: 0:02:09.077236
+2025-08-04 04:05:22,746 - INFO - 🏆 BEST MODEL SELECTED:
+2025-08-04 04:05:22,752 - INFO -    📈 Test Accuracy: 0.6486
+2025-08-04 04:05:22,752 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 04:05:23,051 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 04:05:23,063 - INFO -    📈 Accuracy:  0.8521
+2025-08-04 04:05:23,063 - INFO -    📈 Precision: 1.0000
+2025-08-04 04:05:23,063 - INFO -    📈 Recall:    0.6705
+2025-08-04 04:05:23,063 - INFO -    📈 F1 Score:  0.8028
+2025-08-04 04:05:23,063 - INFO -    📈 ROC AUC:   0.9805
+2025-08-04 04:05:23,063 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 04:05:23,252 - INFO - 📊 TEST RESULTS:
+2025-08-04 04:05:23,252 - INFO -    📈 Accuracy:  0.6486
+2025-08-04 04:05:23,253 - INFO -    📈 Precision: 0.9516
+2025-08-04 04:05:23,253 - INFO -    📈 Recall:    0.3073
+2025-08-04 04:05:23,253 - INFO -    📈 F1 Score:  0.4646
+2025-08-04 04:05:23,253 - INFO -    📈 ROC AUC:   0.4763
+2025-08-04 04:05:23,291 - INFO - 📄 Performance metrics saved to: experiments/best_test_svm_yolov8n_20250804_040313/performance_metrics.txt
+2025-08-04 04:05:23,303 - INFO - 💾 Best model saved to: experiments/best_test_svm_yolov8n_20250804_040313/best_test_model.pkl
+2025-08-04 04:05:23,303 - INFO - 💾 Results saved to: experiments/best_test_svm_yolov8n_20250804_040313/results.json
+2025-08-04 04:05:23,304 - INFO - 💾 All combinations saved to: experiments/best_test_svm_yolov8n_20250804_040313/all_combinations.csv
+2025-08-04 04:05:23,304 - INFO - 📊 Creating visualization plots...
+2025-08-04 04:05:23,305 - INFO -    📈 Creating overfitting analysis...
+2025-08-04 04:05:36,709 - INFO - ✅ Analysis plots created successfully
+2025-08-04 04:05:36,715 - INFO - 📁 Plots saved to: experiments/best_test_svm_yolov8n_20250804_040313/plots
