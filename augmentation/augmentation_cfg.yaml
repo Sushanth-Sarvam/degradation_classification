@@ -1,0 +1,309 @@
+# Complete Augmentation Configuration
+# Four types of ranges for each parameter:
+# - valid_range: Allowable values for the function (based on code analysis)
+# - augraphy_range: Default values in Augraphy source files
+# - recommended_range: The values you specified for your experiments
+# - value: Average of recommended_range for UI initialization
+
+augmentations:
+  brightness:
+    brightness_range:
+      valid_range: [0.1, 3.0]        # Brightness multiplier - practical limits
+      augraphy_range: [0.8, 1.4]     # From source: (0.8, 1.4)
+      recommended_range: [0.1, 0.5]  # Your specification: range 0.1 - 0.5
+      value: 0.3                     # Average of recommended_range
+    min_brightness:
+      valid_range: [0, 1]            # Flag: 0 or 1
+      augraphy_range: 0              # From source: 0
+      recommended_range: 0          
+      value: 0
+    min_brightness_value:
+      valid_range: [0, 255]          # Pixel intensity range
+      augraphy_range: [20, 50]       # From source: (20, 50)
+      recommended_range: [10, 10]    # Your specification: fixed at 10
+      value: 10
+
+  inkbleed:
+    intensity_range:
+      valid_range: [0.0, 1.0]        # Probability/intensity range
+      augraphy_range: [0.4, 0.7]     # From source: (0.4, 0.7)
+      recommended_range: [0.6, 0.8]  # Your specification: 0.7 ±0.1
+      value: 0.7                     # Average of recommended_range
+    kernel_size:
+      valid_range: [1, 50]           # Kernel size limits (single dimension, will be used as (size, size))
+      augraphy_range: [5, 5]         # From source: (5, 5) - creates 5x5 kernel
+      recommended_range: [4, 8]      # Your specification: 6 ±2 (will create square kernels 4x4 to 8x8)
+      value: 6                       # Average of recommended_range (creates 6x6 kernel)
+    severity:
+      valid_range: [0.0, 1.0]        # Severity as probability
+      augraphy_range: [0.3, 0.4]     # From source: (0.3, 0.4)
+      recommended_range: [0.6, 0.8]  # Your specification: 0.7 ±0.1
+      value: 0.7                     # Average of recommended_range
+
+  letterpress:
+    n_samples:
+      valid_range: [50, 2000]        # Reasonable cluster size limits
+      augraphy_range: [300, 800]     # From source: (300, 800)
+      recommended_range: [60, 60]    # Updated: user specified default 60
+      value: 60                      # User specified default
+    n_clusters:
+      valid_range: [50, 2000]        # Reasonable cluster count limits
+      augraphy_range: [300, 800]     # From source: (300, 800)
+      recommended_range: [60, 60]    # Updated: user specified default 60
+      value: 60                      # User specified default
+    std_range:
+      valid_range: [100, 10000]      # Standard deviation limits
+      augraphy_range: [1500, 5000]   # From source: (1500, 5000)
+      recommended_range: [1500, 2000] # Your specification: 1500-2000
+      value: 1750                    # Average of recommended_range
+    value_range:
+      valid_range: [0, 255]          # Pixel value range
+      augraphy_range: [200, 255]     # From source: (200, 255)
+      recommended_range: [100, 200]  # Your specification: 100-200
+      value: 150                     # Average of recommended_range
+    value_threshold_range:
+      valid_range: [0, 255]          # Pixel threshold range
+      augraphy_range: [128, 128]     # From source: (128, 128) - fixed
+      recommended_range: [128, 128]  # Your specification: 128
+      value: 128                     # Average (same as fixed)
+    blur:
+      valid_range: [0, 1]            # Flag: 0 or 1
+      augraphy_range: 1              # From source: 1
+      recommended_range: 1           # Your specification: enabled
+      value: 1
+
+  hollow:
+    hollow_median_kernel_value_range:
+      valid_range: [3, 201]          # Odd numbers, reasonable kernel size
+      augraphy_range: [71, 101]      # From source: (71, 101)
+      recommended_range: [3, 5]      # Your specification: 3-5
+      value: 4                       # Average of recommended_range
+    hollow_dilation_kernel_size_range:
+      valid_range: [1, 50]           # Dilation kernel limits
+      augraphy_range: [1, 2]         # From source: (1, 2)
+      recommended_range: [3, 5]      # Updated: use value 4 with range 3 (4±1)
+      value: 4                       # Average of recommended_range
+    hollow_min_width_range:
+      valid_range: [1, 1000]         # Pixel width limits
+      augraphy_range: [1, 2]         # From source: (1, 2)
+      recommended_range: [1, 10]     # Your specification: 1-10
+      value: 5.5                     # Average of recommended_range (1+10)/2
+    hollow_max_width_range:
+      valid_range: [1, 2000]         # Pixel width limits
+      augraphy_range: [150, 200]     # From source: (150, 200)
+      recommended_range: [50, 300]   # Your specification: 50-300
+      value: 175                     # Average of recommended_range (50+300)/2
+    hollow_min_height_range:
+      valid_range: [1, 1000]         # Pixel height limits
+      augraphy_range: [1, 2]         # From source: (1, 2)
+      recommended_range: [1, 10]     # Your specification: 1-10
+      value: 5.5                     # Average of recommended_range (1+10)/2
+    hollow_max_height_range:
+      valid_range: [1, 2000]         # Pixel height limits
+      augraphy_range: [150, 200]     # From source: (150, 200)
+      recommended_range: [50, 300]   # Your specification: 50-300
+      value: 175                     # Average of recommended_range (50+300)/2
+    hollow_min_area_range:
+      valid_range: [1, 10000]        # Pixel area limits
+      augraphy_range: [10, 20]       # From source: (10, 20)
+      recommended_range: [1, 50]     # Your specification: 1-50
+      value: 25.5                    # Average of recommended_range (1+50)/2
+    hollow_max_area_range:
+      valid_range: [100, 50000]      # Pixel area limits
+      augraphy_range: [2000, 5000]   # From source: (2000, 5000)
+      recommended_range: [1000, 8000] # Your specification: 1000-8000
+      value: 4500                    # Average of recommended_range (1000+8000)/2
+
+  lowinkperiodiclines:
+    count_range:
+      valid_range: [1, 20]           # Reasonable line count
+      augraphy_range: [2, 5]         # From source: (2, 5)
+      recommended_range: [6, 6]      # Your specification: fixed at 6
+      value: 6                       # Average (same as fixed)
+    period_range:
+      valid_range: [5, 100]          # Reasonable period distance
+      augraphy_range: [10, 30]       # From source: (10, 30)
+      recommended_range: [30, 30]    # Your specification: fixed at 30
+      value: 30                      # Average (same as fixed)
+    use_consistent_lines:
+      valid_range: [True, False]     # Boolean values
+      augraphy_range: True           # From source: True
+      recommended_range: True        # Your specification: True
+      value: True
+    noise_probability:
+      valid_range: [0.0, 1.0]        # Probability range
+      augraphy_range: 0.1            # From source: 0.1
+      recommended_range: 0.25        # Your specification: 0.25
+      value: 0.25
+
+  lowinkrandomlines:
+    count_range:
+      valid_range: [1, 50]           # Reasonable line count
+      augraphy_range: [5, 10]        # From source: (5, 10)
+      recommended_range: [15, 15]    # Your specification: fixed at 15
+      value: 15                      # Average (same as fixed)
+    use_consistent_lines:
+      valid_range: [True, False]     # Boolean values
+      augraphy_range: True           # From source: True
+      recommended_range: True        # Your specification: True
+      value: True
+    noise_probability:
+      valid_range: [0.0, 1.0]        # Probability range
+      augraphy_range: 0.1            # From source: 0.1
+      recommended_range: 0.50        # Your specification: 0.50
+      value: 0.50
+
+  # Paper Phase Augmentations
+  colorpaper:
+    hue_range:
+      valid_range: [0, 360]          # HSV hue range
+      augraphy_range: [28, 45]       # From source: (28, 45)
+      recommended_range: [28, 45]    # Use augraphy default
+      value: 36                      # Average of recommended_range (integer)
+    saturation_range:
+      valid_range: [0, 100]          # HSV saturation range
+      augraphy_range: [10, 40]       # From source: (10, 40)
+      recommended_range: [10, 40]    # Use augraphy default
+      value: 25                      # Average of recommended_range (integer)
+
+  noisetexturize:
+    sigma_range:
+      valid_range: [1, 20]           # Noise intensity
+      augraphy_range: [3, 10]        # From source: (3, 10)
+      recommended_range: [3, 10]     # Use augraphy default
+      value: 6.5                     # Average of recommended_range
+    turbulence_range:
+      valid_range: [1, 10]           # Turbulence factor
+      augraphy_range: [2, 5]         # From source: (2, 5)
+      recommended_range: [2, 5]      # Use augraphy default
+      value: 3.5                     # Average of recommended_range
+    texture_width_range:
+      valid_range: [50, 800]         # Texture width size
+      augraphy_range: [100, 500]     # From source: (100, 500)
+      recommended_range: [100, 500]  # Use augraphy default
+      value: 300                     # Average of recommended_range
+    texture_height_range:
+      valid_range: [50, 800]         # Texture height size
+      augraphy_range: [100, 500]     # From source: (100, 500)
+      recommended_range: [100, 500]  # Use augraphy default
+      value: 300                     # Average of recommended_range
+
+  subtlenoise:
+    subtle_range:
+      valid_range: [1, 30]           # Noise intensity
+      augraphy_range: 10             # From source: 10 (single value)
+      recommended_range: 10          # Use augraphy default
+      value: 10                      # Same as augraphy default
+
+  bookbinding:
+    shadow_radius_range:
+      valid_range: [10, 200]         # Shadow blur radius
+      augraphy_range: [30, 100]      # From source: (30, 100)
+      recommended_range: [40, 80]    # Moderate shadow
+      value: 60                      # Average of recommended_range
+    curve_range_right:
+      valid_range: [10, 200]         # Right page curve intensity
+      augraphy_range: [50, 100]      # From source: (50, 100)
+      recommended_range: [60, 90]    # Moderate right curve
+      value: 75                      # Average of recommended_range
+    curve_range_left:
+      valid_range: [50, 400]         # Left page curve intensity
+      augraphy_range: [200, 300]     # From source: (200, 300)
+      recommended_range: [220, 280]  # Moderate left curve
+      value: 250                     # Average of recommended_range
+    curve_ratio_right:
+      valid_range: [0.01, 0.2]       # Right page squeeze ratio
+      augraphy_range: [0.05, 0.1]    # From source: (0.05, 0.1)
+      recommended_range: [0.06, 0.09] # Moderate right squeeze
+      value: 0.075                   # Average of recommended_range
+    curve_ratio_left:
+      valid_range: [0.3, 0.8]        # Left page squeeze ratio
+      augraphy_range: [0.5, 0.6]     # From source: (0.5, 0.6)
+      recommended_range: [0.45, 0.65] # Moderate left squeeze
+      value: 0.55                    # Average of recommended_range
+
+  folding:
+    fold_count:
+      valid_range: [1, 5]            # Number of folds
+      augraphy_range: 2              # From source: 2 (single value)
+      recommended_range: 2           # Use augraphy default
+      value: 2                       # Same as augraphy default
+    gradient_width:
+      valid_range: [0.01, 1.0]       # Gradient width factor
+      augraphy_range: [0.1, 0.2]     # From source: (0.1, 0.2)
+      recommended_range: [0.1, 0.2]  # Use augraphy default
+      value: 0.15                    # Average of recommended_range
+    gradient_height:
+      valid_range: [0.001, 0.1]      # Gradient height factor
+      augraphy_range: [0.01, 0.02]   # From source: (0.01, 0.02)
+      recommended_range: [0.01, 0.02] # Use augraphy default
+      value: 0.015                   # Average of recommended_range
+
+  pageborder:
+    curve_frequency:
+      valid_range: [0, 20]           # Frequency of border curves
+      augraphy_range: [0, 1]         # From source: (0, 1)
+      recommended_range: [0, 1]      # Use augraphy default
+      value: 0.5                     # Average of recommended_range
+    curve_height:
+      valid_range: [1, 50]           # Height of border curves
+      augraphy_range: [2, 4]         # From source: (2, 4)
+      recommended_range: [2, 4]      # Use augraphy default
+      value: 3                       # Average of recommended_range
+
+# Parameter type information for validation and UI generation
+parameter_info:
+  ranges:
+    # Parameters that expect tuple inputs
+    brightness_range: "tuple"
+    min_brightness_value: "tuple"
+    intensity_range: "tuple"
+    kernel_size: "tuple"
+    severity: "tuple"
+    n_samples: "tuple"
+    n_clusters: "tuple"
+    std_range: "tuple"
+    value_range: "tuple"
+    value_threshold_range: "tuple"
+    count_range: "tuple"
+    period_range: "tuple"
+    hollow_median_kernel_value_range: "tuple"
+    hollow_dilation_kernel_size_range: "tuple"
+    hollow_min_width_range: "tuple"
+    hollow_max_width_range: "tuple"
+    hollow_min_height_range: "tuple"
+    hollow_max_height_range: "tuple"
+    hollow_min_area_range: "tuple"
+    hollow_max_area_range: "tuple"
+    # Paper phase parameters
+    hue_range: "tuple"
+    saturation_range: "tuple"
+    sigma_range: "tuple"
+    turbulence_range: "tuple"
+    texture_width_range: "tuple"
+    texture_height_range: "tuple"
+    shadow_radius_range: "tuple"
+    curve_range_right: "tuple"
+    curve_range_left: "tuple"
+    curve_ratio_right: "tuple"
+    curve_ratio_left: "tuple"
+    gradient_width: "tuple"
+    gradient_height: "tuple"
+    curve_frequency: "tuple"
+    curve_height: "tuple"
+    
+  single_values:
+    # Parameters that expect single values
+    min_brightness: "int"
+    blur: "int"
+    use_consistent_lines: "bool"
+    noise_probability: "float"
+    # Paper phase single values
+    subtle_range: "int"
+    fold_count: "int"
+
+# Usage notes:
+# 1. valid_range: Use for UI slider bounds and parameter validation
+# 2. augraphy_range: Reference for understanding Augraphy's intended usage
+# 3. recommended_range: Your experimental parameters - use for actual augmentation
+# 4. value: Default slider position in UI (mean of recommended_range)

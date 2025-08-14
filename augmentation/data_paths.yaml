@@ -1,0 +1,30 @@
+# Configuration file for image source paths
+image_sources:
+  pdf_left_half:
+    name: "PDF Left Half"
+    base_path: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/gt_extraction/pdf_left_half_images"
+    description: "Left half of PDF pages"
+    
+  pdf_right_half:
+    name: "PDF Right Half"
+    base_path: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/gt_extraction/pdf_right_half_images"
+    description: "Right half of PDF pages"
+    
+  synthetic_data:
+    name: "Synthetic Data"
+    base_path: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/synth-data/synthgen_v5_sample_for_checks/synthgen_v5/gu"
+    description: "Synthetic Gujarati text images"
+    
+  sample_images:
+    name: "Sample Images"
+    base_path: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/sample_images"
+    description: "Curated sample collection from all sources"
+
+# Default source selection
+default_source: "sample_images"
+
+# File extensions to search for
+supported_extensions:
+  - ".png"
+  - ".jpg"
+  - ".jpeg"

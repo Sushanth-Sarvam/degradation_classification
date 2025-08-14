@@ -2,6 +2,25 @@
 quality_analysis/
 DQA_data/
 
+# Ignore augmentation data and cache directories
+augmentation/cursor_docs/
+augmentation/augraphy_cache/
+augmentation/gt_extraction/pdf_ground_truth/
+augmentation/gt_extraction/pdf_left_half_images/
+augmentation/gt_extraction/pdf_right_half_images/
+augmentation/synth-data/
+
+
+# Ignore external libraries (should be cloned separately)
+augraphy/
+augraphy_cache/
+
+# Ignore VLM classification and data backup directories
+VLM_based_classification/
+data/backups/
+
+
+
 # Python
 __pycache__/
 *.py[cod]

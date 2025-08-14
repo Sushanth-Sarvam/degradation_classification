@@ -1,0 +1,160 @@
+# Batch Augmentation Configuration
+# This file defines which augmentations to apply and their parameter combinations
+
+input_directory: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/sample_images"
+output_directory: "/root/sarvam/akshar-experiments-pipeline/gujarati-readability-classification/augmentation/generated_augmentations"
+
+# Supported image extensions
+supported_extensions: [".png", ".jpg", ".jpeg"]
+
+# List of augmentation configurations to generate
+augmentation_sets:
+  # Brightness variations
+  - name: "brightness_low"
+    phase: "ink"
+    augmentations:
+      - type: "brightness"
+        parameters:
+          brightness_range: [0.2, 0.2]
+          min_brightness: 1
+          min_brightness_value: [10, 10]
+  
+  - name: "brightness_medium"
+    phase: "ink"
+    augmentations:
+      - type: "brightness"
+        parameters:
+          brightness_range: [0.5, 0.5]
+          min_brightness: 1
+          min_brightness_value: [10, 10]
+  
+  - name: "brightness_high"
+    phase: "ink"
+    augmentations:
+      - type: "brightness"
+        parameters:
+          brightness_range: [0.8, 0.8]
+          min_brightness: 1
+          min_brightness_value: [10, 10]
+
+  # InkBleed variations
+  - name: "inkbleed_light"
+    phase: "ink"
+    augmentations:
+      - type: "inkbleed"
+        parameters:
+          intensity_range: [0.6, 0.6]
+          severity: [0.6, 0.6]
+          kernel_size: [4, 4]
+  
+  - name: "inkbleed_medium"
+    phase: "ink"
+    augmentations:
+      - type: "inkbleed"
+        parameters:
+          intensity_range: [0.7, 0.7]
+          severity: [0.7, 0.7]
+          kernel_size: [6, 6]
+  
+  - name: "inkbleed_heavy"
+    phase: "ink"
+    augmentations:
+      - type: "inkbleed"
+        parameters:
+          intensity_range: [0.8, 0.8]
+          severity: [0.8, 0.8]
+          kernel_size: [8, 8]
+
+  # Letterpress variations
+  - name: "letterpress_light"
+    phase: "ink"
+    augmentations:
+      - type: "letterpress"
+        parameters:
+          n_samples: [60, 61]  # +1 for np.random.randint
+          n_clusters: [60, 61]  # +1 for np.random.randint
+          std_range: [1500, 1500]
+          value_range: [150, 151]  # +1 for np.random.randint
+          value_threshold_range: [128, 128]
+  
+  - name: "letterpress_medium"
+    phase: "ink"
+    augmentations:
+      - type: "letterpress"
+        parameters:
+          n_samples: [125, 126]
+          n_clusters: [125, 126]
+          std_range: [1750, 1750]
+          value_range: [175, 176]
+          value_threshold_range: [128, 128]
+
+  # Paper phase augmentations
+  - name: "colorpaper_warm"
+    phase: "paper"
+    augmentations:
+      - type: "colorpaper"
+        parameters:
+          hue_range: [34, 38]  # Warm tones
+          saturation_range: [23, 27]
+  
+  - name: "colorpaper_cool"
+    phase: "paper"
+    augmentations:
+      - type: "colorpaper"
+        parameters:
+          hue_range: [200, 240]  # Cool tones
+          saturation_range: [30, 50]
+
+  # Combined augmentations (multiple effects)
+  - name: "vintage_effect"
+    phase: "combined"
+    augmentations:
+      - type: "brightness"
+        parameters:
+          brightness_range: [0.3, 0.3]
+          min_brightness: 1
+          min_brightness_value: [15, 15]
+      - type: "inkbleed"
+        parameters:
+          intensity_range: [0.6, 0.6]
+          severity: [0.5, 0.5]
+          kernel_size: [5, 5]
+      - type: "colorpaper"
+        parameters:
+          hue_range: [25, 35]  # Sepia-like
+          saturation_range: [20, 30]
+
+  - name: "degraded_document"
+    phase: "combined"
+    augmentations:
+      - type: "brightness"
+        parameters:
+          brightness_range: [0.4, 0.4]
+          min_brightness: 1
+          min_brightness_value: [20, 20]
+      - type: "letterpress"
+        parameters:
+          n_samples: [100, 101]
+          n_clusters: [100, 101]
+          std_range: [2000, 2000]
+          value_range: [120, 121]
+          value_threshold_range: [128, 128]
+      - type: "noisetexturize"
+        parameters:
+          sigma_range: [6, 7]
+          turbulence_range: [3, 4]
+          texture_width_range: [300, 301]
+          texture_height_range: [300, 301]
+
+# Output filename format options
+filename_format:
+  include_original_name: true
+  include_augmentation_set: true
+  include_parameters: true  # Include key parameter values in filename
+  separator: "_"
+  
+# Processing options
+processing:
+  max_images_per_set: null  # null = process all images, number = limit per augmentation set
+  skip_existing: true  # Skip if output file already exists
+  preserve_format: true  # Keep original image format (png, jpg, etc.)
