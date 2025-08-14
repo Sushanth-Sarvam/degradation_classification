@@ -1,0 +1,35 @@
+📈 EFFICIENTNET XGBoost PAGE-WISE Performance Metrics
+======================================================================
+
+Training Summary:
+- Classification Type: page_wise
+- Training Time: 119.3 seconds
+- Feature Dimension: 1,280 features
+- Training Samples: 476 images
+- Test Samples: 122 images
+- Hyperparameter Combinations Tested: 16
+- Cross-validation Folds: 3
+- Best CV F1 Score: 0.7812
+
+Best Hyperparameters:
+- colsample_bytree: 0.8
+- learning_rate: 0.2
+- max_depth: 6
+- n_estimators: 200
+- reg_alpha: 0
+- reg_lambda: 1
+- subsample: 1.0
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |    99.79% |    65.57% |   -34.22% |
+| Precision   |    99.69% |    66.39% |   -33.31% |
+| Recall      |   100.00% |    97.53% |    -2.47% |
+| F1          |    99.85% |    79.00% |   -20.85% |
+| Roc Auc     |   100.00% |    59.26% |   -40.74% |
+
+
+Generated: 2025-08-06 17:59:42

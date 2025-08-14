@@ -1,0 +1,40 @@
+📈 YOLOV8N SVM Performance Metrics
+======================================================================
+
+Training Summary:
+- Model Type: Support Vector Machine (SVM)
+- Training Time: 7.6 seconds
+- Feature Dimension: 256 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Hyperparameter Combinations Tested: 24
+- Cross-validation Folds: 3
+- Feature Scaling: True
+- Best CV F1 Score: 0.5588
+
+Best Hyperparameters:
+- svm__C: 1
+- svm__gamma: scale
+- svm__kernel: linear
+- svm__probability: True
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |    99.87% |    40.57% |   -59.30% |
+| Precision   |   100.00% |    42.58% |   -57.42% |
+| Recall      |    99.71% |    56.77% |   -42.94% |
+| F1          |    99.86% |    48.66% |   -51.19% |
+| Roc Auc     |   100.00% |    43.86% |   -56.14% |
+
+
+SVM Characteristics:
+- Kernel: linear
+- C (Regularization): 1
+- Gamma: scale
+- Feature scaling applied before training
+- Suitable for high-dimensional feature spaces
+
+Generated: 2025-08-04 02:47:11

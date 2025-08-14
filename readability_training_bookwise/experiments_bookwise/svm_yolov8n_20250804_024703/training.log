@@ -1,0 +1,67 @@
+2025-08-04 02:47:03,292 - INFO - Loading yolov8n features from embeddings/yolov8n_embeddings_20250804_012817
+2025-08-04 02:47:03,304 - INFO - ✅ Features loaded successfully
+2025-08-04 02:47:03,304 - INFO - 📊 Train features: (771, 256)
+2025-08-04 02:47:03,304 - INFO - 📊 Test features: (387, 256)
+2025-08-04 02:47:03,305 - INFO - 📊 Feature dimension: 256
+2025-08-04 02:47:03,305 - INFO - 🚀 Starting SVM training with hyperparameter tuning...
+2025-08-04 02:47:03,305 - INFO - 🔧 SVM hyperparameter tuning...
+2025-08-04 02:47:03,305 - INFO - 📊 Total parameter combinations: 24
+2025-08-04 02:47:03,306 - INFO - 🔄 Cross-validation folds: 3
+2025-08-04 02:47:03,310 - INFO - ⏱️  Estimated time: 24 - 72 minutes
+2025-08-04 02:47:03,310 - INFO - 📈 Using StandardScaler for feature normalization
+2025-08-04 02:47:03,310 - INFO - 🚀 Starting hyperparameter search...
+2025-08-04 02:47:10,913 - INFO - ✅ Hyperparameter search completed!
+2025-08-04 02:47:10,919 - INFO - ⏱️  Total training time: 0:00:07.602368
+2025-08-04 02:47:10,919 - INFO - 🏆 Best parameters found:
+2025-08-04 02:47:10,919 - INFO -    svm__C: 1
+2025-08-04 02:47:10,919 - INFO -    svm__gamma: scale
+2025-08-04 02:47:10,919 - INFO -    svm__kernel: linear
+2025-08-04 02:47:10,919 - INFO -    svm__probability: True
+2025-08-04 02:47:10,919 - INFO - 🏆 Best CV F1 score: 0.5588
+2025-08-04 02:47:10,939 - INFO - 🔝 Top parameter combinations:
+2025-08-04 02:47:10,944 - INFO -    1. F1: 0.5588 (±0.1318) - {'svm__C': 1, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 02:47:10,949 - INFO -    2. F1: 0.5588 (±0.1318) - {'svm__C': 1, 'svm__gamma': 'auto', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 02:47:10,950 - INFO -    3. F1: 0.5588 (±0.1318) - {'svm__C': 10, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 02:47:10,950 - INFO -    4. F1: 0.5588 (±0.1318) - {'svm__C': 10, 'svm__gamma': 'auto', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 02:47:10,950 - INFO -    5. F1: 0.5588 (±0.1318) - {'svm__C': 100, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 02:47:10,950 - INFO - 📊 Evaluating best model on training and test sets...
+2025-08-04 02:47:10,950 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 02:47:10,950 - INFO -    Making predictions...
+2025-08-04 02:47:10,964 - INFO -    Calculating probabilities...
+2025-08-04 02:47:10,983 - INFO -    Computing metrics...
+2025-08-04 02:47:11,017 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 02:47:11,023 - INFO -    📈 Accuracy:  0.9987
+2025-08-04 02:47:11,023 - INFO -    📈 Precision: 1.0000
+2025-08-04 02:47:11,023 - INFO -    📈 Recall:    0.9971
+2025-08-04 02:47:11,023 - INFO -    📈 F1 Score:  0.9986
+2025-08-04 02:47:11,023 - INFO -    📈 ROC AUC:   1.0000
+2025-08-04 02:47:11,024 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(425), np.float32(1.0): np.int64(346)}
+2025-08-04 02:47:11,024 - INFO -    📊 Pred distribution: {np.float32(0.0): np.int64(426), np.float32(1.0): np.int64(345)}
+2025-08-04 02:47:11,024 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 02:47:11,024 - INFO -    Making predictions...
+2025-08-04 02:47:11,029 - INFO -    Calculating probabilities...
+2025-08-04 02:47:11,038 - INFO -    Computing metrics...
+2025-08-04 02:47:11,070 - INFO - 📊 TEST RESULTS:
+2025-08-04 02:47:11,075 - INFO -    📈 Accuracy:  0.4057
+2025-08-04 02:47:11,075 - INFO -    📈 Precision: 0.4258
+2025-08-04 02:47:11,075 - INFO -    📈 Recall:    0.5677
+2025-08-04 02:47:11,075 - INFO -    📈 F1 Score:  0.4866
+2025-08-04 02:47:11,075 - INFO -    📈 ROC AUC:   0.4386
+2025-08-04 02:47:11,075 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(195), np.float32(1.0): np.int64(192)}
+2025-08-04 02:47:11,075 - INFO -    📊 Pred distribution: {np.float32(0.0): np.int64(131), np.float32(1.0): np.int64(256)}
+2025-08-04 02:47:11,090 - INFO - 📄 Performance metrics saved to: experiments/svm_yolov8n_20250804_024703/performance_metrics.txt
+2025-08-04 02:47:11,095 - INFO - 💾 Model saved to: experiments/svm_yolov8n_20250804_024703/best_model.pkl
+2025-08-04 02:47:11,096 - INFO - 💾 Results saved to: experiments/svm_yolov8n_20250804_024703/results.json
+2025-08-04 02:47:11,096 - INFO - 💾 CV results saved to: experiments/svm_yolov8n_20250804_024703/cv_results.csv
+2025-08-04 02:47:11,096 - INFO - 📊 Creating visualization plots...
+2025-08-04 02:47:11,099 - INFO -    📈 Creating confusion matrix...
+2025-08-04 02:47:13,415 - INFO -    📈 Creating ROC curve...
+2025-08-04 02:47:16,974 - INFO -    📈 Creating hyperparameter search visualization...
+2025-08-04 02:47:35,885 - INFO -    📈 Creating prediction analysis...
+2025-08-04 02:47:51,864 - INFO - ✅ All 4 plots created successfully
+2025-08-04 02:47:51,872 - INFO - 📁 Plots saved to: experiments/svm_yolov8n_20250804_024703/plots
+2025-08-04 02:47:51,872 - INFO - 📊 Plot files:
+2025-08-04 02:47:51,872 - INFO -    - confusion_matrix.png
+2025-08-04 02:47:51,872 - INFO -    - roc_curve.png
+2025-08-04 02:47:51,873 - INFO -    - hyperparameter_search.png
+2025-08-04 02:47:51,873 - INFO -    - prediction_analysis.png

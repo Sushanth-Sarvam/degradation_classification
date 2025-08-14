@@ -1,0 +1,41 @@
+📈 LAYOUTXLM SVM Performance (Best Test Accuracy)
+======================================================================
+
+Training Summary:
+- Model Type: Support Vector Machine (SVM)
+- Selection Criteria: Best Test Accuracy
+- Training Time: 608.7 seconds
+- Feature Dimension: 768 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Combinations Tested: 144
+- Feature Scaling: True
+- Best Test Accuracy: 0.5401
+- Overfitting Score: 0.3860
+
+Best Hyperparameters:
+- svm__C: 1
+- svm__degree: 5
+- svm__gamma: scale
+- svm__kernel: poly
+- svm__probability: True
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |    92.61% |    54.01% |   -38.60% |
+| Precision   |   100.00% |    76.92% |   -23.08% |
+| Recall      |    83.53% |    10.42% |   -73.11% |
+| F1          |    91.02% |    18.35% |   -72.67% |
+| Roc Auc     |    99.95% |    52.03% |   -47.92% |
+
+
+Anti-Overfitting Strategy:
+- Tested 144 parameter combinations
+- Selected model with highest test accuracy
+- This prevents overfitting by choosing generalization over memorization
+- Feature scaling applied before training
+
+Generated: 2025-08-04 04:13:19

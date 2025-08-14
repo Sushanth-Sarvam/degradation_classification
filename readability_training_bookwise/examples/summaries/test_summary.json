@@ -1,0 +1,62 @@
+{
+  "dataset_info": {
+    "split": "test",
+    "num_images": 5,
+    "description": "Randomly sampled test images from various books in the dataset"
+  },
+  "model_performance": {
+    "overall_test_accuracy": "78.81%",
+    "model_type": "XGBoost + EfficientNet",
+    "notes": "These images were used for model evaluation - performance varies by book"
+  },
+  "images": [
+    {
+      "filename": "06 Harishchandra Natak_030.png",
+      "ground_truth": "readable",
+      "book": "06 Harishchandra Natak",
+      "model_prediction": "non-readable",
+      "correct": false,
+      "notes": "This book had 25% error rate (15/60 images wrong)"
+    },
+    {
+      "filename": "06 Harishchandra Natak_082.png", 
+      "ground_truth": "readable",
+      "book": "06 Harishchandra Natak",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "This book had 25% error rate"
+    },
+    {
+      "filename": "08 HINDUSTANMA MUSAFARI_122.png",
+      "ground_truth": "non-readable", 
+      "book": "08 HINDUSTANMA MUSAFARI",
+      "model_prediction": "readable",
+      "correct": false,
+      "notes": "This book had 15% error rate (9/60 images wrong)"
+    },
+    {
+      "filename": "Pritam_063.png",
+      "ground_truth": "readable",
+      "book": "Pritam",
+      "model_prediction": "non-readable",
+      "correct": false,
+      "notes": "Worst performing book - 100% error rate (21/21 images wrong)"
+    },
+    {
+      "filename": "Swarupsannidhan_156.png",
+      "ground_truth": "non-readable",
+      "book": "Swarupsannidhan",
+      "model_prediction": "readable",
+      "correct": false,
+      "notes": "This book had 19.1% error rate (4/21 images wrong)"
+    }
+  ],
+  "metadata": {
+    "created": "2025-08-04",
+    "experiment": "best_test_xgboost_efficientnet_20250804_044337",
+    "model_type": "XGBoost + EfficientNet",
+    "test_accuracy": "78.81%",
+    "dataset_size": "387 test images total",
+    "sampling_method": "random with seed=42"
+  }
+} 

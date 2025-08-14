@@ -1,0 +1,67 @@
+2025-08-04 03:53:00,435 - INFO - Loading layoutxlm features from embeddings/layoutxlm_embeddings_20250804_030331
+2025-08-04 03:53:00,734 - INFO - ✅ Features loaded successfully
+2025-08-04 03:53:00,735 - INFO - 📊 Train features: (771, 768)
+2025-08-04 03:53:00,735 - INFO - 📊 Test features: (387, 768)
+2025-08-04 03:53:00,735 - INFO - 📊 Feature dimension: 768
+2025-08-04 03:53:00,735 - INFO - 🚀 Starting SVM training with hyperparameter tuning...
+2025-08-04 03:53:00,735 - INFO - 🔧 SVM hyperparameter tuning...
+2025-08-04 03:53:00,735 - INFO - 📊 Total parameter combinations: 24
+2025-08-04 03:53:00,735 - INFO - 🔄 Cross-validation folds: 3
+2025-08-04 03:53:00,735 - INFO - ⏱️  Estimated time: 24 - 72 minutes
+2025-08-04 03:53:00,735 - INFO - 📈 Using StandardScaler for feature normalization
+2025-08-04 03:53:00,735 - INFO - 🚀 Starting hyperparameter search...
+2025-08-04 03:54:04,987 - INFO - ✅ Hyperparameter search completed!
+2025-08-04 03:54:05,024 - INFO - ⏱️  Total training time: 0:01:04.244236
+2025-08-04 03:54:05,025 - INFO - 🏆 Best parameters found:
+2025-08-04 03:54:05,027 - INFO -    svm__C: 1
+2025-08-04 03:54:05,027 - INFO -    svm__gamma: scale
+2025-08-04 03:54:05,027 - INFO -    svm__kernel: linear
+2025-08-04 03:54:05,027 - INFO -    svm__probability: True
+2025-08-04 03:54:05,028 - INFO - 🏆 Best CV F1 score: 0.4027
+2025-08-04 03:54:05,642 - INFO - 🔝 Top parameter combinations:
+2025-08-04 03:54:05,671 - INFO -    1. F1: 0.4027 (±0.0463) - {'svm__C': 1, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 03:54:05,675 - INFO -    2. F1: 0.4027 (±0.0463) - {'svm__C': 1, 'svm__gamma': 'auto', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 03:54:05,677 - INFO -    3. F1: 0.4027 (±0.0463) - {'svm__C': 10, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 03:54:05,682 - INFO -    4. F1: 0.4027 (±0.0463) - {'svm__C': 10, 'svm__gamma': 'auto', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 03:54:05,686 - INFO -    5. F1: 0.4027 (±0.0463) - {'svm__C': 100, 'svm__gamma': 'scale', 'svm__kernel': 'linear', 'svm__probability': True}
+2025-08-04 03:54:05,688 - INFO - 📊 Evaluating best model on training and test sets...
+2025-08-04 03:54:05,689 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 03:54:05,690 - INFO -    Making predictions...
+2025-08-04 03:54:05,944 - INFO -    Calculating probabilities...
+2025-08-04 03:54:06,131 - INFO -    Computing metrics...
+2025-08-04 03:54:06,293 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 03:54:06,294 - INFO -    📈 Accuracy:  1.0000
+2025-08-04 03:54:06,295 - INFO -    📈 Precision: 1.0000
+2025-08-04 03:54:06,296 - INFO -    📈 Recall:    1.0000
+2025-08-04 03:54:06,297 - INFO -    📈 F1 Score:  1.0000
+2025-08-04 03:54:06,297 - INFO -    📈 ROC AUC:   1.0000
+2025-08-04 03:54:06,299 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(425), np.float32(1.0): np.int64(346)}
+2025-08-04 03:54:06,301 - INFO -    📊 Pred distribution: {np.float32(0.0): np.int64(425), np.float32(1.0): np.int64(346)}
+2025-08-04 03:54:06,301 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 03:54:06,301 - INFO -    Making predictions...
+2025-08-04 03:54:06,560 - INFO -    Calculating probabilities...
+2025-08-04 03:54:06,656 - INFO -    Computing metrics...
+2025-08-04 03:54:06,693 - INFO - 📊 TEST RESULTS:
+2025-08-04 03:54:06,699 - INFO -    📈 Accuracy:  0.5271
+2025-08-04 03:54:06,700 - INFO -    📈 Precision: 0.5263
+2025-08-04 03:54:06,712 - INFO -    📈 Recall:    0.4688
+2025-08-04 03:54:06,712 - INFO -    📈 F1 Score:  0.4959
+2025-08-04 03:54:06,712 - INFO -    📈 ROC AUC:   0.5170
+2025-08-04 03:54:06,712 - INFO -    📊 True distribution: {np.float32(0.0): np.int64(195), np.float32(1.0): np.int64(192)}
+2025-08-04 03:54:06,713 - INFO -    📊 Pred distribution: {np.float32(0.0): np.int64(216), np.float32(1.0): np.int64(171)}
+2025-08-04 03:54:06,842 - INFO - 📄 Performance metrics saved to: experiments/svm_layoutxlm_20250804_035300/performance_metrics.txt
+2025-08-04 03:54:06,843 - INFO - 💾 Model saved to: experiments/svm_layoutxlm_20250804_035300/best_model.pkl
+2025-08-04 03:54:06,844 - INFO - 💾 Results saved to: experiments/svm_layoutxlm_20250804_035300/results.json
+2025-08-04 03:54:06,845 - INFO - 💾 CV results saved to: experiments/svm_layoutxlm_20250804_035300/cv_results.csv
+2025-08-04 03:54:06,846 - INFO - 📊 Creating visualization plots...
+2025-08-04 03:54:06,883 - INFO -    📈 Creating confusion matrix...
+2025-08-04 03:54:11,657 - INFO -    📈 Creating ROC curve...
+2025-08-04 03:54:13,651 - INFO -    📈 Creating hyperparameter search visualization...
+2025-08-04 03:54:26,251 - INFO -    📈 Creating prediction analysis...
+2025-08-04 03:54:35,156 - INFO - ✅ All 4 plots created successfully
+2025-08-04 03:54:35,167 - INFO - 📁 Plots saved to: experiments/svm_layoutxlm_20250804_035300/plots
+2025-08-04 03:54:35,177 - INFO - 📊 Plot files:
+2025-08-04 03:54:35,184 - INFO -    - confusion_matrix.png
+2025-08-04 03:54:35,185 - INFO -    - roc_curve.png
+2025-08-04 03:54:35,186 - INFO -    - hyperparameter_search.png
+2025-08-04 03:54:35,187 - INFO -    - prediction_analysis.png

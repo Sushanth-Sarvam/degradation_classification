@@ -1,0 +1,63 @@
+{
+  "dataset_info": {
+    "split": "train",
+    "num_images": 5,
+    "description": "Randomly sampled training images from various readable books in the dataset",
+    "sampling_method": "random with seed=42"
+  },
+  "model_performance": {
+    "overall_train_accuracy": "100%",
+    "model_type": "XGBoost + EfficientNet",
+    "notes": "All training images achieved perfect accuracy - shows model memorization"
+  },
+  "images": [
+    {
+      "filename": "1 GULAB NATAK_044.png",
+      "ground_truth": "readable",
+      "book": "1 GULAB NATAK",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "Book had 100% accuracy on all training images"
+    },
+    {
+      "filename": "Gujarat Ehtihasic Prasang_161.png", 
+      "ground_truth": "readable",
+      "book": "Gujarat Ehtihasic Prasang",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "Book had 100% accuracy on all training images"
+    },
+    {
+      "filename": "Gujarat Ehtihasic Prasang_344.png",
+      "ground_truth": "readable", 
+      "book": "Gujarat Ehtihasic Prasang",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "Book had 100% accuracy on all training images"
+    },
+    {
+      "filename": "Statue_009.png",
+      "ground_truth": "readable",
+      "book": "Statue",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "Book had 100% accuracy on all training images"
+    },
+    {
+      "filename": "Vibhavana_251.png",
+      "ground_truth": "readable",
+      "book": "Vibhavana",
+      "model_prediction": "readable",
+      "correct": true,
+      "notes": "Book had 100% accuracy on all training images"
+    }
+  ],
+  "metadata": {
+    "created": "2025-08-04",
+    "experiment": "best_test_xgboost_efficientnet_20250804_044337",
+    "model_type": "XGBoost + EfficientNet",
+    "train_accuracy": "100.0%",
+    "dataset_size": "771 training images total",
+    "books_represented": ["1 GULAB NATAK", "Gujarat Ehtihasic Prasang", "Statue", "Vibhavana"]
+  }
+} 

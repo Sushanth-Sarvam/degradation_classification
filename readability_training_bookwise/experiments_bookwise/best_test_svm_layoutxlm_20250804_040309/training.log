@@ -1,0 +1,61 @@
+2025-08-04 04:03:09,204 - INFO - Loading layoutxlm features from embeddings/layoutxlm_embeddings_20250804_030331
+2025-08-04 04:03:09,232 - INFO - ✅ Features loaded successfully
+2025-08-04 04:03:09,239 - INFO - 📊 Train features: (771, 768)
+2025-08-04 04:03:09,239 - INFO - 📊 Test features: (387, 768)
+2025-08-04 04:03:09,239 - INFO - 📊 Feature dimension: 768
+2025-08-04 04:03:09,239 - INFO - 🚀 Starting SVM training with BEST TEST ACCURACY selection...
+2025-08-04 04:03:09,240 - INFO - 🔧 Testing 144 parameter combinations
+2025-08-04 04:03:09,240 - INFO - 🎯 Strategy: Train each SVM and save the one with BEST TEST ACCURACY
+2025-08-04 04:03:09,240 - INFO - 📈 Using StandardScaler for feature normalization
+2025-08-04 04:03:09,240 - INFO - ⏱️  Estimated time: 144 - 720 minutes
+2025-08-04 04:03:14,239 - INFO - 🏆 NEW BEST! Combination 1/144
+2025-08-04 04:03:14,239 - INFO -    📈 Test Accuracy: 0.5039
+2025-08-04 04:03:14,239 - INFO -    📈 Test F1: 0.0000
+2025-08-04 04:03:14,239 - INFO -    📈 Overfitting: 0.0474
+2025-08-04 04:03:14,240 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:14,240 - INFO -    🔧 C: 0.01
+2025-08-04 04:03:29,324 - INFO - 🏆 NEW BEST! Combination 4/144
+2025-08-04 04:03:29,331 - INFO -    📈 Test Accuracy: 0.5349
+2025-08-04 04:03:29,332 - INFO -    📈 Test F1: 0.3750
+2025-08-04 04:03:29,332 - INFO -    📈 Overfitting: 0.3341
+2025-08-04 04:03:29,332 - INFO -    🔧 Kernel: poly
+2025-08-04 04:03:29,332 - INFO -    🔧 C: 0.01
+2025-08-04 04:04:43,306 - INFO - 📊 Progress: 20/144 - Current best test accuracy: 0.5349
+2025-08-04 04:06:14,433 - INFO - 📊 Progress: 40/144 - Current best test accuracy: 0.5349
+2025-08-04 04:07:40,364 - INFO - 📊 Progress: 60/144 - Current best test accuracy: 0.5349
+2025-08-04 04:08:10,578 - INFO - 🏆 NEW BEST! Combination 67/144
+2025-08-04 04:08:10,591 - INFO -    📈 Test Accuracy: 0.5401
+2025-08-04 04:08:10,592 - INFO -    📈 Test F1: 0.1835
+2025-08-04 04:08:10,592 - INFO -    📈 Overfitting: 0.3860
+2025-08-04 04:08:10,592 - INFO -    🔧 Kernel: poly
+2025-08-04 04:08:10,592 - INFO -    🔧 C: 1
+2025-08-04 04:09:03,841 - INFO - 📊 Progress: 80/144 - Current best test accuracy: 0.5401
+2025-08-04 04:10:20,326 - INFO - 📊 Progress: 100/144 - Current best test accuracy: 0.5401
+2025-08-04 04:11:40,272 - INFO - 📊 Progress: 120/144 - Current best test accuracy: 0.5401
+2025-08-04 04:13:01,355 - INFO - 📊 Progress: 140/144 - Current best test accuracy: 0.5401
+2025-08-04 04:13:17,970 - INFO - ✅ Training completed!
+2025-08-04 04:13:17,983 - INFO - ⏱️  Total training time: 0:10:08.730435
+2025-08-04 04:13:17,983 - INFO - 🏆 BEST MODEL SELECTED:
+2025-08-04 04:13:17,984 - INFO -    📈 Test Accuracy: 0.5401
+2025-08-04 04:13:17,984 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 04:13:19,059 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 04:13:19,059 - INFO -    📈 Accuracy:  0.9261
+2025-08-04 04:13:19,059 - INFO -    📈 Precision: 1.0000
+2025-08-04 04:13:19,059 - INFO -    📈 Recall:    0.8353
+2025-08-04 04:13:19,059 - INFO -    📈 F1 Score:  0.9102
+2025-08-04 04:13:19,060 - INFO -    📈 ROC AUC:   0.9995
+2025-08-04 04:13:19,060 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 04:13:19,647 - INFO - 📊 TEST RESULTS:
+2025-08-04 04:13:19,647 - INFO -    📈 Accuracy:  0.5401
+2025-08-04 04:13:19,647 - INFO -    📈 Precision: 0.7692
+2025-08-04 04:13:19,648 - INFO -    📈 Recall:    0.1042
+2025-08-04 04:13:19,648 - INFO -    📈 F1 Score:  0.1835
+2025-08-04 04:13:19,648 - INFO -    📈 ROC AUC:   0.5203
+2025-08-04 04:13:19,705 - INFO - 📄 Performance metrics saved to: experiments/best_test_svm_layoutxlm_20250804_040309/performance_metrics.txt
+2025-08-04 04:13:19,711 - INFO - 💾 Best model saved to: experiments/best_test_svm_layoutxlm_20250804_040309/best_test_model.pkl
+2025-08-04 04:13:19,711 - INFO - 💾 Results saved to: experiments/best_test_svm_layoutxlm_20250804_040309/results.json
+2025-08-04 04:13:19,711 - INFO - 💾 All combinations saved to: experiments/best_test_svm_layoutxlm_20250804_040309/all_combinations.csv
+2025-08-04 04:13:19,711 - INFO - 📊 Creating visualization plots...
+2025-08-04 04:13:19,720 - INFO -    📈 Creating overfitting analysis...
+2025-08-04 04:13:33,546 - INFO - ✅ Analysis plots created successfully
+2025-08-04 04:13:33,546 - INFO - 📁 Plots saved to: experiments/best_test_svm_layoutxlm_20250804_040309/plots

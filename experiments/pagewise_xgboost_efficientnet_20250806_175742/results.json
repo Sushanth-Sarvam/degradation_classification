@@ -1,0 +1,32 @@
+{
+  "backbone_name": "efficientnet",
+  "classification_type": "page_wise",
+  "feature_dimension": 1280,
+  "training_time_seconds": 119.288446,
+  "best_params": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.2,
+    "max_depth": 6,
+    "n_estimators": 200,
+    "reg_alpha": 0,
+    "reg_lambda": 1,
+    "subsample": 1.0
+  },
+  "best_cv_score": 0.7811804415252691,
+  "train_metrics": {
+    "accuracy": 0.9978991596638656,
+    "precision": 0.9969230769230769,
+    "recall": 1.0,
+    "f1": 0.9984591679506933,
+    "roc_auc": 0.9999695419103314
+  },
+  "test_metrics": {
+    "accuracy": 0.6557377049180327,
+    "precision": 0.6638655462184874,
+    "recall": 0.9753086419753086,
+    "f1": 0.79,
+    "roc_auc": 0.5925925925925926
+  },
+  "total_combinations_tested": 16,
+  "cv_folds": 3
+}

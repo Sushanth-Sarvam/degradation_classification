@@ -1,0 +1,6 @@
+2025-08-04 01:21:42,557 - INFO - Starting resnet50 feature extraction
+2025-08-04 01:22:58,511 - INFO - resnet50 feature extraction completed successfully
+2025-08-04 01:22:58,516 - INFO - Starting efficientnet feature extraction
+2025-08-04 01:23:52,511 - INFO - efficientnet feature extraction completed successfully
+2025-08-04 01:23:52,516 - INFO - Starting yolov8n feature extraction
+2025-08-04 01:23:52,602 - INFO - Starting layoutxlm feature extraction

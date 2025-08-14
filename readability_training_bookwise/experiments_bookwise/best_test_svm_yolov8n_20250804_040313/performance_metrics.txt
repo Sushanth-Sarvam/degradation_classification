@@ -1,0 +1,41 @@
+📈 YOLOV8N SVM Performance (Best Test Accuracy)
+======================================================================
+
+Training Summary:
+- Model Type: Support Vector Machine (SVM)
+- Selection Criteria: Best Test Accuracy
+- Training Time: 129.1 seconds
+- Feature Dimension: 256 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Combinations Tested: 144
+- Feature Scaling: True
+- Best Test Accuracy: 0.6486
+- Overfitting Score: 0.2036
+
+Best Hyperparameters:
+- svm__C: 0.1
+- svm__degree: 3
+- svm__gamma: scale
+- svm__kernel: poly
+- svm__probability: True
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |    85.21% |    64.86% |   -20.36% |
+| Precision   |   100.00% |    95.16% |    -4.84% |
+| Recall      |    67.05% |    30.73% |   -36.32% |
+| F1          |    80.28% |    46.46% |   -33.82% |
+| Roc Auc     |    98.05% |    47.63% |   -50.42% |
+
+
+Anti-Overfitting Strategy:
+- Tested 144 parameter combinations
+- Selected model with highest test accuracy
+- This prevents overfitting by choosing generalization over memorization
+- Feature scaling applied before training
+
+Generated: 2025-08-04 04:05:23

@@ -1,0 +1,30 @@
+{
+  "backbone_name": "layoutxlm",
+  "model_type": "SVM",
+  "feature_dimension": 768,
+  "training_time_seconds": 64.244236,
+  "best_params": {
+    "svm__C": 1,
+    "svm__gamma": "scale",
+    "svm__kernel": "linear",
+    "svm__probability": true
+  },
+  "best_cv_score": 0.4027340513670257,
+  "train_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0
+  },
+  "test_metrics": {
+    "accuracy": 0.5271317829457365,
+    "precision": 0.5263157894736842,
+    "recall": 0.46875,
+    "f1": 0.49586776859504134,
+    "roc_auc": 0.5170405982905982
+  },
+  "total_combinations_tested": 24,
+  "cv_folds": 3,
+  "uses_feature_scaling": true
+}

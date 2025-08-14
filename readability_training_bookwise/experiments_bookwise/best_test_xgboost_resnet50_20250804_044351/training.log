@@ -1,0 +1,61 @@
+2025-08-04 04:43:51,229 - INFO - Loading resnet50 features from embeddings/resnet50_embeddings_20250804_012142
+2025-08-04 04:43:51,259 - INFO - ✅ Features loaded successfully
+2025-08-04 04:43:51,259 - INFO - 📊 Train features: (771, 2048)
+2025-08-04 04:43:51,260 - INFO - 📊 Test features: (387, 2048)
+2025-08-04 04:43:51,260 - INFO - 📊 Feature dimension: 2048
+2025-08-04 04:43:51,260 - INFO - 🚀 Starting XGBoost training with BEST TEST ACCURACY selection...
+2025-08-04 04:43:51,260 - INFO - 🔧 Testing 16 parameter combinations
+2025-08-04 04:43:51,260 - INFO - 🎯 Strategy: Train each model and save the one with BEST TEST ACCURACY
+2025-08-04 04:43:51,260 - INFO - ⏱️  Estimated time: 8.0 - 32 minutes
+2025-08-04 04:44:54,201 - INFO - 🏆 NEW BEST! Combination 1/16
+2025-08-04 04:44:54,201 - INFO -    📈 Test Accuracy: 0.6718
+2025-08-04 04:44:54,201 - INFO -    📈 Test F1: 0.7040
+2025-08-04 04:44:54,201 - INFO -    📈 Overfitting: 0.3282
+2025-08-04 04:44:54,201 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 04:47:50,801 - INFO - 🏆 NEW BEST! Combination 3/16
+2025-08-04 04:47:50,807 - INFO -    📈 Test Accuracy: 0.6951
+2025-08-04 04:47:50,807 - INFO -    📈 Test F1: 0.7204
+2025-08-04 04:47:50,808 - INFO -    📈 Overfitting: 0.3049
+2025-08-04 04:47:50,819 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 05:01:10,471 - INFO - 📊 Progress: 10/16 - Current best test accuracy: 0.6951
+2025-08-04 05:03:00,467 - INFO - 🏆 NEW BEST! Combination 11/16
+2025-08-04 05:03:00,467 - INFO -    📈 Test Accuracy: 0.6977
+2025-08-04 05:03:00,467 - INFO -    📈 Test F1: 0.7208
+2025-08-04 05:03:00,467 - INFO -    📈 Overfitting: 0.3023
+2025-08-04 05:03:00,467 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+2025-08-04 05:07:39,744 - INFO - 🏆 NEW BEST! Combination 14/16
+2025-08-04 05:07:39,744 - INFO -    📈 Test Accuracy: 0.7028
+2025-08-04 05:07:39,744 - INFO -    📈 Test F1: 0.7174
+2025-08-04 05:07:39,744 - INFO -    📈 Overfitting: 0.2972
+2025-08-04 05:07:39,744 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 100, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 1.0}
+2025-08-04 05:10:49,306 - INFO - 🏆 NEW BEST! Combination 16/16
+2025-08-04 05:10:49,307 - INFO -    📈 Test Accuracy: 0.7106
+2025-08-04 05:10:49,307 - INFO -    📈 Test F1: 0.7214
+2025-08-04 05:10:49,307 - INFO -    📈 Overfitting: 0.2894
+2025-08-04 05:10:49,307 - INFO -    🔧 Params: {'colsample_bytree': 0.8, 'learning_rate': 0.2, 'max_depth': 6, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 1.0}
+2025-08-04 05:10:49,308 - INFO - ✅ Training completed!
+2025-08-04 05:10:49,308 - INFO - ⏱️  Total training time: 0:26:58.047718
+2025-08-04 05:10:49,308 - INFO - 🏆 BEST MODEL SELECTED:
+2025-08-04 05:10:49,308 - INFO -    📈 Test Accuracy: 0.7106
+2025-08-04 05:10:49,309 - INFO - 🔍 Evaluating on train set (771 samples)...
+2025-08-04 05:10:49,355 - INFO - 📊 TRAIN RESULTS:
+2025-08-04 05:10:49,359 - INFO -    📈 Accuracy:  1.0000
+2025-08-04 05:10:49,359 - INFO -    📈 Precision: 1.0000
+2025-08-04 05:10:49,359 - INFO -    📈 Recall:    1.0000
+2025-08-04 05:10:49,359 - INFO -    📈 F1 Score:  1.0000
+2025-08-04 05:10:49,360 - INFO -    📈 ROC AUC:   1.0000
+2025-08-04 05:10:49,360 - INFO - 🔍 Evaluating on test set (387 samples)...
+2025-08-04 05:10:49,414 - INFO - 📊 TEST RESULTS:
+2025-08-04 05:10:49,414 - INFO -    📈 Accuracy:  0.7106
+2025-08-04 05:10:49,414 - INFO -    📈 Precision: 0.6905
+2025-08-04 05:10:49,415 - INFO -    📈 Recall:    0.7552
+2025-08-04 05:10:49,415 - INFO -    📈 F1 Score:  0.7214
+2025-08-04 05:10:49,415 - INFO -    📈 ROC AUC:   0.7510
+2025-08-04 05:10:49,435 - INFO - 📄 Performance metrics saved to: experiments/best_test_xgboost_resnet50_20250804_044351/performance_metrics.txt
+2025-08-04 05:10:49,436 - INFO - 💾 Best model saved to: experiments/best_test_xgboost_resnet50_20250804_044351/best_test_model.pkl
+2025-08-04 05:10:49,436 - INFO - 💾 Results saved to: experiments/best_test_xgboost_resnet50_20250804_044351/results.json
+2025-08-04 05:10:49,436 - INFO - 💾 All combinations saved to: experiments/best_test_xgboost_resnet50_20250804_044351/all_combinations.csv
+2025-08-04 05:10:49,436 - INFO - 📊 Creating visualization plots...
+2025-08-04 05:10:49,438 - INFO -    📈 Creating overfitting analysis...
+2025-08-04 05:10:51,977 - INFO - ✅ Analysis plots created successfully
+2025-08-04 05:10:51,978 - INFO - 📁 Plots saved to: experiments/best_test_xgboost_resnet50_20250804_044351/plots

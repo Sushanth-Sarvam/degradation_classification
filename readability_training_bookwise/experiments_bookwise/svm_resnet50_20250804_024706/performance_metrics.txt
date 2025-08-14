@@ -1,0 +1,40 @@
+📈 RESNET50 SVM Performance Metrics
+======================================================================
+
+Training Summary:
+- Model Type: Support Vector Machine (SVM)
+- Training Time: 64.7 seconds
+- Feature Dimension: 2,048 features
+- Training Samples: 771 images
+- Test Samples: 387 images
+- Hyperparameter Combinations Tested: 24
+- Cross-validation Folds: 3
+- Feature Scaling: True
+- Best CV F1 Score: 0.4575
+
+Best Hyperparameters:
+- svm__C: 0.1
+- svm__gamma: scale
+- svm__kernel: linear
+- svm__probability: True
+
+Performance Metrics:
+====================
+
+| Metric      | Train Set | Test Set  | Difference |
+|-------------|-----------|-----------|------------|
+| Accuracy    |   100.00% |    64.08% |   -35.92% |
+| Precision   |   100.00% |    61.28% |   -38.72% |
+| Recall      |   100.00% |    75.00% |   -25.00% |
+| F1          |   100.00% |    67.45% |   -32.55% |
+| Roc Auc     |   100.00% |    73.94% |   -26.06% |
+
+
+SVM Characteristics:
+- Kernel: linear
+- C (Regularization): 0.1
+- Gamma: scale
+- Feature scaling applied before training
+- Suitable for high-dimensional feature spaces
+
+Generated: 2025-08-04 02:48:11

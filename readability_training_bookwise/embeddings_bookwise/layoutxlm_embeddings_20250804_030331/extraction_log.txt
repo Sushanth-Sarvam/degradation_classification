@@ -1,0 +1,2 @@
+2025-08-04 03:03:31,079 - INFO - Starting layoutxlm feature extraction
+2025-08-04 03:52:02,541 - INFO - layoutxlm feature extraction completed successfully

@@ -1,0 +1,39 @@
+{
+  "split_type": "book_level",
+  "creation_date": "2025-08-05 15:22:23",
+  "random_seed": 42,
+  "books": [
+    "Geeta Manthan",
+    "Scan Collection 20250409151711",
+    "Sona na Vruksho Manilal H Patel",
+    "Takhuni Varta",
+    "Drashyavali",
+    "Sahajanand Swami",
+    "Vibhavana",
+    "Gujarat Ehtihasic Prasang",
+    "Scan Collection 20221219142107",
+    "Kavyamangala",
+    "Scan Collection 20221130112342",
+    "Sona na",
+    "Himalay No Pravas 1962",
+    "Scan Collection 20221226172345",
+    "Gule Polaad",
+    "Mukaam",
+    "1 GULAB NATAK",
+    "Vyajno Varas",
+    "ANVESHNA",
+    "Gata Zarna Gani",
+    "Sathina Sahityanu Digdarshan",
+    "Statue",
+    "2015.305581.Misarno-Mukti",
+    "Daya Ram"
+  ],
+  "statistics": {
+    "total_books": 24,
+    "readable_books": 13,
+    "non_readable_books": 11,
+    "total_images": 771,
+    "readable_images": 346,
+    "non_readable_images": 425
+  }
+}

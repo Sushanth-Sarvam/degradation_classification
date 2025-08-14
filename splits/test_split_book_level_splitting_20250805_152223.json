@@ -1,0 +1,26 @@
+{
+  "split_type": "book_level",
+  "creation_date": "2025-08-05 15:22:23",
+  "random_seed": 42,
+  "books": [
+    "06 Harishchandra Natak",
+    "Himalay No Pravas 1941",
+    "Scan Collection 20221219133422",
+    "Ane Bhaumitika",
+    "Pritam",
+    "Sundaramni",
+    "08 HINDUSTANMA MUSAFARI",
+    "09 Rudhiprayog Kosh",
+    "Chakhadie Chadhi",
+    "Thakkarbapa",
+    "Swarupsannidhan"
+  ],
+  "statistics": {
+    "total_books": 11,
+    "readable_books": 6,
+    "non_readable_books": 5,
+    "total_images": 387,
+    "readable_images": 192,
+    "non_readable_images": 195
+  }
+}
